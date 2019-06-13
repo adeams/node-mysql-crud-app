@@ -1,3 +1,5 @@
+https://dev.to/achowba/build-a-simple-app-using-node-js-and-mysql-19me
+
 Build a simple app using Node JS and MySQL.
  achowba profile image Atauba Prince   Jun 23 '18 ・10 min read
 #node #mysql

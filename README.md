@@ -1,3 +1,5 @@
+https://expressjs.com/en/guide/database-integration.html
+https://www.codementor.io/julieisip/learn-rest-api-using-express-js-and-mysql-db-ldflyx8g2
 https://dev.to/achowba/build-a-simple-app-using-node-js-and-mysql-19me
 
 Build a simple app using Node JS and MySQL.

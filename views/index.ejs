@@ -1,7 +1,12 @@
 <% include partials/header.ejs %>
     <div class="table-wrapper">
         <% if (players.length > 0) {%>
-            <!-- <table class="table table-hovered">
+            <%= players[0].header %>
+            <%= players[0].date %>
+<!--         <% players.forEach((player, index) => { %>
+            <%= player.header %>
+        <% }) %> -->
+<!--             <table class="table table-hovered">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID</th>

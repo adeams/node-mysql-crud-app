@@ -1,46 +1,176 @@
-<% include partials/header.ejs %>
-    <div class="table-wrapper">
-        <% if (players.length > 0) {%>
-            <%= players[0].header %>
-            <%= players[0].date %>
-<!--         <% players.forEach((player, index) => { %>
-            <%= player.header %>
-        <% }) %> -->
-<!--             <table class="table table-hovered">
-                <thead class="thead-dark">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 4 Responsive Layout Example</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+    <div class="container-fluid">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <a class="navbar-brand" href="#">
+                    <img src="assets\img\270a1e9947eb018fe40d77fdae065567.png" width="30" height="30" alt=""> 
+                </a>
+            </div>
+        </div>
+    </div>    
+</nav>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-lg-12 col-xl-12">
+          <div class="card">
+              <h3><p class="text-center">TIGHTENING PROCESS MONITOR</p></h3>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-12 col-xl-12">
+          <div class="card">
+              <table class="table table-bordered">
+                  <thead class="thead-dark">
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Image</th>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Number</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Action</th>
+                      <th scope="col"><p class="text-center">MODEL</p></th>
+                      <th scope="col"><p class="text-center">NUMBER</p></th>
+                      <th scope="col"><p class="text-center">PROCESS</p></th>
+                      <th scope="col"><p class="text-center">TORQUE RANGE [Nm]</p></th>
                     </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th ><p class="text-center">TURQFK13EH5</p></th>
+                      <th ><pclass="text-center">123456789</p></th>
+                      <th ><p class="text-center">ASS'Y DRIVE PLATE</p></th>
+                      <th ><p class="text-center">0.0 - 0.0</p></th>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-6">
+            <div class="card">
+              <img src="assets\img\download.jpeg" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+              <label for="inputEmail4">BARCODE PATTERN INPUT</label>
+               <div class="form-row">
+                  <div class="form-group col-md-1 col-lg-10 col-xl-10">
+                    <input type="barcode" class="form-control" id="inputEmail4" placeholder="">
+                  </div>
+                  <div class="form-group col-md-1 col-lg-2 col-xl-2">
+                    <button type="send" class="btn btn-primary">Send</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-6">
+          <div class="card">
+            <h9>TAKE TIME</h9>
+            <div class="row">
+                <span class="border border-primary"></span>
+                <span class="border border-secondary"></span>
+                <span class="border border-success"></span>
+                <span class="border border-danger"></span>
+                <span class="border border-warning"></span>
+                <span class="border border-info"></span>
+                <span class="border border-light"></span>
+                <span class="border border-dark"></span>
+                <span class="border border-white"></span>
+            </div>
+          </div>
+          <div class="card">
+            <h1>45.5 [Nm]</h1>
+          </div>
+          <div class="card">
+              <h2>23 Deg</h2>
+          </div>
+          <div class="card">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"><p class="text-center">POSITION</p></th>
+                    <th scope="col"><p class="text-center">TORQUE [Nm]</p></th>
+                    <th scope="col"><p class="text-center">ANGEL [Deg]</p></th>
+                    <th scope="col"><p class="text-center">JOUGEMENT</p></th>
+                    <th scope="col"><p class="text-center">ERROR DESCRIPTION</p></th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <% players.forEach((player, index) => { %>
-                        <tr>
-                            <th scope="row"><%= player.id %></th>
-                            <td><img src="/assets/img/<%= player.image %>" class="rounded-circle player-img" alt=""></td>
-                            <td><%= player.first_name %></td>
-                            <td><%= player.last_name %></td>
-                            <td><%= player.position %></td>
-                            <td><%= player.number %></td>
-                            <td>@<%= player.user_name %></td>
-                            <td>
-                                <a href="/edit/<%= player.id %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
-                                <a href="/delete/<%= player.id %>" class="btn btn-sm btn-danger">Delete</a>
-                            </td>
-                        </tr>
-                    <% }) %>
+                  <tr>
+                    <th ><p class="text-center"></p></th>
+                    <th ><pclass="text-center"></p></th>
+                    <th ><p class="text-center"></p></th>
+                    <th ><p class="text-center"></p></th>
+                    <th ><p class="text-center"></p></th>
+                  </tr>
+                  <tr>
+                      <th ><p class="text-center"></p></th>
+                      <th ><pclass="text-center"></p></th>
+                      <th ><p class="text-center"></p></th>
+                      <th ><p class="text-center"></p></th>
+                      <th ><p class="text-center"></p></th>
+                    </tr>
+                    <tr>
+                        <th ><p class="text-center"></p></th>
+                        <th ><pclass="text-center"></p></th>
+                        <th ><p class="text-center"></p></th>
+                        <th ><p class="text-center"></p></th>
+                        <th ><p class="text-center"></p></th>
+                      </tr>
                 </tbody>
-            </table> -->
-        <% } else { %>
-            <p class="text-center">No players found. Go <a href="/add" >here</a> to add players.</p>
-        <% } %>
+              </table>
+          </div>
+          <div class="card">
+              <div class="row">
+                <div class="col">
+                  <h2>TARGET</h2>
+                </div>
+                <div class="col">
+                    <h1><label class="badge badge-info">00</label></h1>
+                </div>
+                <div class="col">
+                    <h2>ACTUAL</h2>
+                  </div>
+                  <div class="col">
+                      <h1><label class="badge badge-info">00</label></h1>
+                  </div>
+              </div>
+          </div>
+        </div>
     </div>
+    <hr>
+    <footer>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Copyright &copy; 2019 Tutorial Republic</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <a href="#" class="text-dark">Terms of Use</a> 
+                <span class="text-muted mx-2">|</span> 
+                <a href="#" class="text-dark">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
 </div>
 </body>
-</html>
+</html>  
+
+<style>
+.triangle {
+    width: 30px;
+    height: 50px;
+    border: 1px solid black; /* ใส่เส้นขอบแบบทึบสีดำขนาด 1px */
+}
+</style>

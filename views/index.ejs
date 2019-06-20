@@ -29,7 +29,7 @@
     <div class="row">
       <div class="col-md-6 col-lg-12 col-xl-12">
           <div class="card">
-              <h3><p class="text-center">TIGHTENING PROCESS MONITOR</p></h3>
+              <h3><p class="text-center"><%= players[0].header %></p></h3>
           </div>
       </div>
     </div>
@@ -47,10 +47,10 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <th ><p class="text-center">TURQFK13EH5</p></th>
-                      <th ><pclass="text-center">123456789</p></th>
-                      <th ><p class="text-center">ASS'Y DRIVE PLATE</p></th>
-                      <th ><p class="text-center">0.0 - 0.0</p></th>
+                      <th ><p class="text-center"><%= players[0].model %></p></th>
+                      <th ><pclass="text-center"><%= players[0].number %></p></th>
+                      <th ><p class="text-center"><%= players[0].process %></p></th>
+                      <th ><p class="text-center"><%= players[0].torque_range %></p></th>
                     </tr>
                   </tbody>
                 </table>
@@ -60,7 +60,7 @@
     <div class="row">
         <div class="col-md-6 col-lg-6 col-xl-6">
             <div class="card">
-              <img src="assets\img\download.jpeg" class="card-img-top" alt="...">
+              <img src="<%= players[0].img %>" class="card-img-top" alt="...">
             </div>
             <div class="card">
               <label for="inputEmail4">BARCODE PATTERN INPUT</label>
@@ -96,10 +96,10 @@
           <div class="card text-white bg-success">
             <div class="row">
               <div class="col">
-                <h2>ok</h2>
+                <h2><%= players[0].status %></h2>
               </div>
               <div class="col">
-                <h1>45.5</h1>
+                <h1><%= players[0].nm %></h1>
               </div>
               <div class="col">
                 <h1>[Nm]</h1>
@@ -112,7 +112,7 @@
                     <h2></h2>
                   </div>
                   <div class="col">
-                    <h1>23</h1>
+                    <h1><%= players[0].deg %></h1>
                   </div>
                   <div class="col">
                     <h1>Deg</h1>
@@ -161,13 +161,13 @@
                   <h2>TARGET</h2>
                 </div>
                 <div class="col">
-                    <h1><label class="badge badge-info">00</label></h1>
+                    <h1><label class="badge badge-info"><%= players[0].target %></label></h1>
                 </div>
                 <div class="col">
                     <h2>ACTUAL</h2>
                   </div>
                   <div class="col">
-                      <h1><label class="badge badge-info">00</label></h1>
+                      <h1><label class="badge badge-info"><%= players[0].actual %></label></h1>
                   </div>
               </div>
           </div>
